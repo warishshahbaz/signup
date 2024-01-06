@@ -6,7 +6,7 @@ const good_to_go = document.getElementById("status");
 
 function handleChangeEmail(e) {
   email_err.style.display = "block";
-
+  good_to_go.style.display = "none";
   const reg = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$");
 
   if (reg.test(e.target.value)) {
@@ -17,6 +17,7 @@ function handleChangeEmail(e) {
 }
 function handleChangePass(e) {
   passErr.style.display = "block";
+  good_to_go.style.display = "none";
   if (e.target.value.length > 8) {
     passErr.style.display = "none";
   } else {
