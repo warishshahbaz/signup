@@ -27,11 +27,12 @@ email.addEventListener("input", handleChangeEmail);
 pass.addEventListener("input", handleChangePass);
 
 function handleSubmit() {
-  const email = document.getElementById("email").value;
-  const pass = document.getElementById("pass").value;
   if (email_err.style.display == "none" && passErr.style.display === "none") {
+    alert("Sign Up Success!");
     good_to_go.style.display = "block";
   } else {
     good_to_go.style.display = "none";
   }
+  document.getElementById("email").value = "";
+  document.getElementById("pass").value = "";
 }
